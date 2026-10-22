@@ -4,15 +4,15 @@ const port = 3000;
 
 // GET --> Leer datos
 app.get("/", (req, res) => {
-  res.send("Bienvenido a la página principal");
+  res.send("Bienvenido a la página principal. Mira el /info y el /datos");
 });
 
-// GET --> Leer datos y los dejamos en /info
+// GET --> Leer datos y los dejamos en /info en formato HTML
 app.get("/info", (req, res) => {
   res.send("<h2>Información del servidor Express</h2>");
 });
 
-//GET --> Leer datos y los dejamos en /datos 
+//GET --> Leer datos y los dejamos en /datos en formato JSON
 app.get("/datos", (req, res) => {
   res.json({
     curso: "PSP",
