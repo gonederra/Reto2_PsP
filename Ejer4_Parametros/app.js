@@ -31,7 +31,7 @@ app.get('/buscar', (req, res) => {
 });
 
 // 4 Página de inicio con enlaces de prueba
-
+/*
 app.get('/', (req, res) => {
   res.send(`
     <h2>Servidor de Ejemplo</h2>
@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
     </ul>
   `);
 });
-
+*/
 
 
 // Arranque del servidor
