@@ -1,10 +1,20 @@
+// Importamos el módulo Express
 const express = require('express');
+
+// Creamos una aplicación Express
 const app = express();
 
+// Definimos el puerto donde escuchará el servidor
+const port = 3000;
+
+// Definimos una ruta principal ("/")
+// Cuando alguien accede a http://localhost:3000
+// el servidor responde con un mensaje de texto
 app.get('/', (req, res) => {
-  res.send('¡Hola! El restaurante está abierto');
+  res.send("¡Servidor funcionando correctamente con Express!");
 });
 
+// Creacion de los pedidos de ejemplo
 const pedidos = [
   { id: 1, mesa: 4, platos: ['paella', 'agua'], estado: 'pendiente' },
   { id: 2, mesa: 7, platos: ['tortilla'], estado: 'servido' }
@@ -28,8 +38,7 @@ app.get('/api/pedidos/:id', (req, res) => {
 });
 */
 
-
-
-app.listen(3000, () => {
-  console.log('Servidor en http://localhost:3000');
+// Iniciamos el servidor
+app.listen(port, () => {
+  console.log('Servidor escuchando en http://localhost:${port}');
 });
