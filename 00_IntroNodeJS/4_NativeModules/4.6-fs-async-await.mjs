@@ -2,6 +2,9 @@
 // Permite escribir código asincrónico que se parece al código síncrono, 
 // lo que facilita su comprensión y mantenimiento.
 
+// Esto lo que está haciendo es una función asíncrona pero secuencial, es decir, que se ejecuta de manera secuencial, 
+// esperando a que cada operación asíncrona se complete antes de pasar a la siguiente.
+
 // Sin embargo, async/await no es compatible con CommonJS, por lo que debemos usar módulos ES (ECMAScript) 
 // para poder utilizarlo sin hacer grandes cambios.
 
