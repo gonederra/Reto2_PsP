@@ -1,6 +1,9 @@
 // Se ha ido migrando de callbacks a promesas en Node.js, y ahora se puede usar el módulo 'fs/promises' 
 // para trabajar con el sistema de archivos de manera más sencilla y moderna.
 
+// Con promisify puedes convertir funciones basadas en callbacks en funciones que devuelven promesas, pero 
+// no las veremos en este curso, ya que Node.js ya tiene soporte nativo para promesas en muchos de sus módulos.
+
 // Una promesa en JavaScript es un objeto que representa la eventual finalización (o falla) de una operación 
 // asincrónica y su valor resultante.
 const fs = require('node:fs/promises')
