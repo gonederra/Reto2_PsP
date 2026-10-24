@@ -20,3 +20,7 @@ console.log('Leyendo el segundo archivo...')
 fs.readFile('./archivo2.txt', 'utf-8', (err, text) => {
   console.log('segundo texto:', text)
 })
+
+//En este caso el primer archivo se lee primero, y cuando termina de leerse, se ejecuta el callback 
+// que imprime el contenido del archivo. Pero si el primer archivo fuera más grande que el segundo, 
+// el segundo se leeria primero, y cuando termine de leerse, se ejecutaria su callback
