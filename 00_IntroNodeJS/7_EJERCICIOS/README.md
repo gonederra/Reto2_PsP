@@ -1,9 +1,9 @@
 # Ejercicios: Introducción a Node.js
 
-**Asignatura:** Programación de Servicios y Procesos
-**Bloque:** 00 · Fundamentos de Node.js
-**Modalidad:** En parejas
-**Módulos trabajados:** `os`, `fs` (y `path`) · Librería externa: `picocolors`
+**Asignatura:** Programación de Servicios y Procesos  
+**Bloque:** 00 · Fundamentos de Node.js  
+**Modalidad:** En parejas  
+**Módulos trabajados:** `os`, `fs` (y `path`) · Librería externa: `picocolors`  
 
 ---
 
@@ -11,11 +11,11 @@
 
 Practicar los fundamentos vistos en clase construyendo tres pequeñas aplicaciones de consola. Al terminar, deberías ser capaz de:
 
-- Obtener información del sistema con el módulo nativo **`os`**.
-- Leer, escribir y explorar archivos y carpetas con el módulo nativo **`fs`**.
-- Instalar y usar una dependencia externa (**`picocolors`**) con **npm**.
-- Gestionar argumentos de línea de comandos (`process.argv`) y errores básicos.
-- Organizar un proyecto y publicarlo en **GitHub**.
+- Obtener información del sistema con el módulo nativo **`os`**.  
+- Leer, escribir y explorar archivos y carpetas con el módulo nativo **`fs`**.  
+- Instalar y usar una dependencia externa (**`picocolors`**) con **npm**.  
+- Gestionar argumentos de línea de comandos (`process.argv`) y errores básicos.  
+- Organizar un proyecto y publicarlo en **GitHub**.  
 
 ---
 
