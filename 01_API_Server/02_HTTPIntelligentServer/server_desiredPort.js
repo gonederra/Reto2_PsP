@@ -15,3 +15,8 @@ findAvailablePort(desiredPort).then(port => {
     console.log(`server listening on port http://localhost:${port}`)
   })
 })
+
+// Si intentamos ejecutar en un puerto 80 o 443 el error es EACCES, ya que esos puertos
+// requieren privilegios de administrador. Como nuestro freeport.js no contempla este error, 
+// la promesa se rechazará y nos devuelve el error. El freeport que hemos diseñado solo contempla el error 
+// EADDRINUSE, que es el que se produce cuando el puerto está ocupado.
