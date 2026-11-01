@@ -1,0 +1,23 @@
+{
+  "name": "curso_node_2dm3",
+  "version": "1.0.0",
+  "description": "Curso de node de segundo curso en CEBANC",
+  "keywords": [
+    "PsP",
+    "educational"
+  ],
+  "homepage": "https://github.com/gonederra/Reto2_PsP#readme",
+  "bugs": {
+    "url": "https://github.com/gonederra/Reto2_PsP/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonederra/Reto2_PsP.git"
+  },
+  "author": "Gorka Oñederra",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

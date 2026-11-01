@@ -1,0 +1,23 @@
+npm init:   Nos creará un archivo JSON con los parametros que especifiquemos para NPM.
+            Importará también los paquetes necesarios y los cargará automáticamente para cualquiera
+            que le interese nuestro proyecto para que pueda descargarlo.
+
+            Si no quieres responder todas las preguntas, ejecutas el flag --y y te lo hará por defecto.
+
+            Por ahora no hay ninguna dependencia porque hemos utilizado modulos nativos. Con npm, podemos
+            instalar modulos externos en https://www.npmjs.com/.
+
+            Vamos a instalar picocolors y veremos así que ya tenemos una dependencia!
+
+            Veremos que al instalar picocolors nos crea una carpeta node modules. Esto descargará picocolors,
+            y TODAS SUS DEPENDENCIAS!
+
+            También nos escribe estas dependencias en nuestro package.json.
+            
+            Si instalamos express con npm install express cuantas dependencias instala: 
+            porque instala las dependencias de express, y las dependencias de las dependencias de express!
+
+            node_modules se puede hacer MUY MUY grande de repente.
+
+            npm uninstall paquetes sirve para borrar todas esas dependencias
+
