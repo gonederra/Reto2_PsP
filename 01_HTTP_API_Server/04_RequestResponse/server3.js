@@ -13,6 +13,7 @@ const processRequest = (req, res) => {
     // de la URL de la petición en la variable req.url, por lo que podríamos hacer un if 
     // para responder diferente según la URL solicitada.
     if (req.url === '/') {
+        res.statusCode = 200; // Esto es opcional, ya que por defecto el status code es 200 OK
         res.end('Hola mundo!');
 
     // ATENTOS! TRIPLE EQUALS (===) vs DOUBLE EQUALS (==)
@@ -21,6 +22,7 @@ const processRequest = (req, res) => {
     // En cambio, si hacemos 5 === '5', esto devolverá false, ya que el tipo de dato es diferente.
     // En estos casos da igual, ya que la URL siempre será un string, pero es una buena práctica utilizar el triple equals para evitar errores inesperados.
     } else if (req.url === '/api/') {
+        res.statusCode = 200;
         res.end('API endpoint');
     } else {
         res.statusCode = 404;
