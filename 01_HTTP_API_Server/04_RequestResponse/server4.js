@@ -23,7 +23,7 @@ const processRequest = (req, res) => {
         res.statusCode = 404;
         res.end('Error ' + res.statusCode + '\nPage not found');
         console.log(pc.red('Response sent: Error 404'));
-        console.log(pc.red('Status code sent:'),pc.bold(pc.red(res.statusCode)));
+        console.log(pc.red('Status code sent:'),pc.red(res.statusCode));
     }
 }
 
