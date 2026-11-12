@@ -68,8 +68,6 @@ Devuelve **en texto plano** los pedidos, con aspecto de JSON.
 
 ⚠️ **Mismos datos que los de la API de SI.**
 
-Ejemplo de la **estructura** (sustituye por los datos reales de SI):
-
 ### 2.5 Cualquier otra ruta
 
 - Código de estado: `404`
@@ -136,7 +134,6 @@ Status code sent: 404
 - Los headers se ponen con `res.setHeader('Content-Type', '...')`.
 - El código de estado se cambia con `res.statusCode = 404` (por defecto es `200`).
 - La respuesta se envía y se cierra con `res.end('...')`.
-- Para convertir un array de JavaScript en texto con formato JSON: `JSON.stringify(datos, null, 2)`.
 - `picocolors` se usa así: `pc.yellow('texto')`, `pc.green('texto')`, `pc.red('texto')`, `pc.bold('texto')`. Se pueden **anidar**: `pc.bold(pc.yellow('texto'))`.
 - Para no repetir código, plantéate crear funciones auxiliares: por ejemplo `logRequest(req)` y `logResponse(mensaje, res)`.
 
