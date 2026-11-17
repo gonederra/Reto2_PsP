@@ -26,7 +26,7 @@ app.get('/api/pedidos', (req, res) => {
 });
 
 //Endpoint para obtener un pedido por su ID
-/*
+
 app.get('/api/pedidos/:id', (req, res) => {
   const id = Number(req.params.id);
   const pedido = pedidos.find(p => p.id === id);
@@ -36,9 +36,9 @@ app.get('/api/pedidos/:id', (req, res) => {
   }
   res.json(pedido);
 });
-*/
+
 
 // Iniciamos el servidor
 app.listen(port, () => {
-  console.log('Servidor escuchando en http://localhost:${port}');
+  console.log(`Servidor escuchando en http://localhost:${port}`);
 });
