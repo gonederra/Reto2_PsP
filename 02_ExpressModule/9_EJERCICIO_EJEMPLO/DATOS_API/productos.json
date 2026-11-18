@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombre": "Teclado Mecánico",
+    "precio": 49.99,
+    "categoriaId": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Monitor 24 pulgadas",
+    "precio": 129.50,
+    "categoriaId": 2
+  }
+]

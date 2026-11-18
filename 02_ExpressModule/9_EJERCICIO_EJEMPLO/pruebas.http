@@ -1,0 +1,62 @@
+// ============================================================
+// 1. ENDPOINTS DE PRODUCTOS
+// ============================================================
+
+### GET todos los productos
+GET http://localhost:3000/api/productos
+
+### GET producto concreto por ID
+GET http://localhost:3000/api/productos/1
+
+### POST crear un nuevo producto
+POST http://localhost:3000/api/productos
+Content-Type: application/json
+
+{
+  "nombre": "Ratón Gaming RGB",
+  "precio": 45.99,
+  "categoriaId": 1
+}
+
+### PUT actualizar un producto existente por ID
+PUT http://localhost:3000/api/productos/1
+Content-Type: application/json
+
+{
+  "nombre": "Teclado Mecánico RGB Pro",
+  "precio": 89.99,
+  "categoriaId": 1
+}
+
+### DELETE borrar un producto por ID
+DELETE http://localhost:3000/api/productos/2
+
+
+// ============================================================
+// 2. ENDPOINTS DE CATEGORÍAS
+// ============================================================
+
+### GET todas las categorías
+GET http://localhost:3000/api/categorias
+
+### GET categoría concreta por ID
+GET http://localhost:3000/api/categorias/1
+
+### POST crear una nueva categoría
+POST http://localhost:3000/api/categorias
+Content-Type: application/json
+
+{
+  "nombre": "Monitores"
+}
+
+### PUT actualizar una categoría existente por ID
+PUT http://localhost:3000/api/categorias/1
+Content-Type: application/json
+
+{
+  "nombre": "Periféricos Gamer"
+}
+
+### DELETE borrar una categoría por ID
+DELETE http://localhost:3000/api/categorias/2
