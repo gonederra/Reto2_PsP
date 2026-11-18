@@ -37,6 +37,10 @@ app.get('/api/pedidos/:id', (req, res) => {
   res.json(pedido);
 });
 
+// la última a la que va a llegar
+app.use((req, res) => {
+  res.status(404).send('<h1>404</h1>')
+})
 
 // Iniciamos el servidor
 app.listen(port, () => {

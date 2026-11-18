@@ -14,8 +14,6 @@ const port = 3000;
 
 
 
-
-
 // ---------- CLIENTES ----------
 
 // GET /api/clientes  -> lista completa
@@ -53,6 +51,10 @@ app.get('/api/pedidos/:id', (req, res) => {
   }
   res.json(pedido);
 });
+
+app.use((req, res) => {
+  res.status(404).send('<h1>404</h1>')
+})
 
 app.listen(port, () => {
   console.log(`Servidor GET escuchando en http://localhost:${port}`);

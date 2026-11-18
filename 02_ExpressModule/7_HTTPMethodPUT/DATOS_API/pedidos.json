@@ -1,0 +1,4 @@
+[
+  { "id": 1, "clienteId": 1, "mesa": 4, "platos": ["paella", "agua"], "estado": "pendiente" },
+  { "id": 2, "clienteId": 2, "mesa": 7, "platos": ["tortilla"], "estado": "servido" }
+]
