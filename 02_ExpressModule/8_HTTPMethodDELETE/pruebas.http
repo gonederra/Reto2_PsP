@@ -1,0 +1,31 @@
+### Probar GET de clientes
+GET http://localhost:3000/api/clientes
+
+### PROBAR GET de 1 cliente
+GET http://localhost:3000/api/clientes/1
+
+### PROBAR GET del tercer cliente
+GET http://localhost:3000/api/clientes/3
+
+### Probar POST para crear un nuevo cliente
+POST http://localhost:3000/api/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Gorka Oñederra",
+  "email": "gonederra@cebanc.com",
+  "telefono": "943123456"
+}
+
+### Probar PUT para actualizar el cliente con ID 1
+PUT http://localhost:3000/api/clientes/4
+Content-Type: application/json
+
+{
+  "nombre": "German Alonso",
+  "email": "galonso@cebanc.com",
+  "telefono": "666666666"
+}
+
+### Probar DELETE para borrar el cliente con ID 1
+DELETE http://localhost:3000/api/clientes/4
