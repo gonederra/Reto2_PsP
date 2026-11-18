@@ -1,5 +1,5 @@
 // ============================================================
-// POST.js  ->  POST: AÑADIR datos
+// PUT.js  ->  PUT: EDITAMOS datos
 // ============================================================
 const express = require('express');
 const fs = require('fs');
@@ -39,6 +39,8 @@ app.get('/api/clientes/:id', (req, res) => {
   res.json(cliente);
 });
 
+// ------------ POST -------------
+
 // POST /api/clientes  -> crear un cliente nuevo
 app.post('/api/clientes', (req, res) => {
   // Creamos el nuevo objeto con los datos que mandes y un ID automático
@@ -59,6 +61,35 @@ app.post('/api/clientes', (req, res) => {
   res.status(201).json(nuevoCliente);
 });
 
+// ------------ PUT -------------
+
+// PUT /api/clientes/:id  -> actualizar un cliente existente
+app.put('/api/clientes/:id', (req, res) => {
+  const id = Number(req.params.id);
+
+  // 1. Buscamos el índice (la posición) del cliente en el array
+  const index = clientes.findIndex(c => c.id === id);
+
+  // Si no existe, devolvemos un 404
+  if (index === -1) {
+    return res.status(404).json({ error: 'Cliente no encontrado' });
+  }
+
+  // 2. Actualizamos los datos 
+  // (mantenemos el ID que ya tenía, y actualizamos nombre/email con lo que llegue en req.body)
+  clientes[index] = {
+    id: id,
+    nombre: req.body.nombre || clientes[index].nombre,
+    email: req.body.email || clientes[index].email,
+    telefono: req.body.telefono || clientes[index].telefono
+  };
+
+  // 3. Guardamos los cambios directamente en el archivo JSON
+  fs.writeFileSync('./DATOS_API/clientes.json', JSON.stringify(clientes, null, 2));
+
+  // 4. Respondemos con el cliente ya modificado
+  res.json(clientes[index]);
+});
 
 //TODO CON PEDIDOS
 

@@ -16,3 +16,13 @@ Content-Type: application/json
   "email": "gonederra@cebanc.com",
   "telefono": "943123456"
 }
+
+### Probar PUT para actualizar el cliente con ID 1
+PUT http://localhost:3000/api/clientes/4
+Content-Type: application/json
+
+{
+  "nombre": "German Alonso",
+  "email": "galonso@cebanc.com",
+  "telefono": "666666666"
+}
