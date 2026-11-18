@@ -39,6 +39,8 @@ app.get('/api/clientes/:id', (req, res) => {
   res.json(cliente);
 });
 
+// ------------ POST -------------
+
 // POST /api/clientes  -> crear un cliente nuevo
 app.post('/api/clientes', (req, res) => {
   // Creamos el nuevo objeto con los datos que mandes y un ID automático
