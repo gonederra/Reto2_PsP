@@ -180,6 +180,10 @@ app.delete('/api/categorias/:id', (req, res) => {
   res.json({ mensaje: 'Categoría eliminada correctamente' });
 });
 
+app.use((req, res) => {
+  res.status(404).send('<h1>Error 404</h1> \n <h2>Page Not Found </h2>')
+})
+
 // Arrancar el servidor
 app.listen(port, () => {
   console.log(pc.green(`Servidor listo escuchando en http://localhost:${port}`));
