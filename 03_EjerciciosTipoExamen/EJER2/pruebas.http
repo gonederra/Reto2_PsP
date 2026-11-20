@@ -1,0 +1,68 @@
+// ============================================================
+// 1. ENDPOINTS DE INCIDENCIAS
+// ============================================================
+
+### GET todas las incidencias
+GET http://127.0.0.1:5082/api/incidencias
+
+### GET incidencia concreta por código
+GET http://127.0.0.1:5082/api/incidencias/H001
+
+### GET incidencia que no existe (devuelve 404)
+GET http://127.0.0.1:5082/api/incidencias/H999
+
+### POST crear una nueva incidencia (la primera nueva será H004)
+POST http://127.0.0.1:5082/api/incidencias
+Content-Type: application/json
+
+{
+  "titulo": "Impresora atascada",
+  "prioridad": "Media",
+  "fecha": "2026-11-05T00:00:00",
+  "descripcion": "La impresora de la planta 1 se atasca con cada hoja."
+}
+
+### POST crear otra incidencia (será H005)
+POST http://127.0.0.1:5082/api/incidencias
+Content-Type: application/json
+
+{
+  "titulo": "Ruido en el compresor",
+  "prioridad": "Alta",
+  "fecha": "2026-11-06T00:00:00",
+  "descripcion": "El compresor hace un ruido metálico al arrancar."
+}
+
+
+// ============================================================
+// 2. ENDPOINTS DE CLIENTES
+// ============================================================
+
+### GET todos los clientes
+GET http://127.0.0.1:5082/api/clientes
+
+### GET cliente concreto por ID
+GET http://127.0.0.1:5082/api/clientes/1
+
+### POST crear un nuevo cliente
+POST http://127.0.0.1:5082/api/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Jon Urrutia",
+  "email": "jon@ejemplo.com",
+  "telefono": "600555666"
+}
+
+### PUT actualizar un cliente existente por ID
+PUT http://127.0.0.1:5082/api/clientes/1
+Content-Type: application/json
+
+{
+  "nombre": "Ane Etxeberria Lasa",
+  "email": "ane.nuevo@ejemplo.com",
+  "telefono": "600111222"
+}
+
+### DELETE borrar un cliente por ID
+DELETE http://127.0.0.1:5082/api/clientes/2
